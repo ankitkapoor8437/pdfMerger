@@ -12,7 +12,7 @@ app.use('/static', express.static('public'))
 const port = 3000
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, "templates/index.html"))
+    res.sendFile(path.join(__dirname, "/index.html"))
 })
 
 app.post('/merge', upload.array('pdfs', 2), async (req, res, next) => {
